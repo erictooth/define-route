@@ -1,17 +1,31 @@
 import { combinePaths } from "../combinePaths";
 
-it("merges two simple paths correctly", () => {
-	expect(combinePaths("subpath", "/basepath/").pathname).toEqual(
-		"/basepath/subpath"
-	);
-});
+const testPaths: [paths: [base: string, sub: string], expected: string][] = [
+	// adds leading and trailing slash to basepath
+	[["basepath", "subpath"], "/basepath/subpath"],
 
-it("drops the basepath if subpath has a leading slash", () => {
-	expect(combinePaths("/subpath", "/basepath/").pathname).toEqual("/subpath");
+	// drops leading slash on subpath
+	[["/basepath/", "/subpath"], "/basepath/subpath"],
+
+	// preserves trailing slash on subpath
+	[["/basepath/", "subpath/"], "/basepath/subpath/"],
+];
+
+it("matches testPaths results", () => {
+	testPaths.forEach((testConfig) => {
+		const [paths, expected] = testConfig;
+		expect(combinePaths(paths[1], paths[0]).pathname).toEqual(expected);
+	});
 });
 
 it("preserves search params from both subpath and basepath", () => {
 	expect(
 		combinePaths("subpath?subParam=1", "/basepath/?baseParam=2").search
 	).toEqual("?subParam=1&baseParam=2");
+});
+
+it("preserves the hash from only the subpath", () => {
+	expect(
+		combinePaths("subpath?subParam=1#testHash", "/basepath#ignoredHash").hash
+	).toEqual("#testHash");
 });
