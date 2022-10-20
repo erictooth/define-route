@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/erictooth/define-route/compare/v0.1.0...v0.2.0) (2022-10-20)
+
+
+### Features
+
+* allow link generating functions to contain URI encoded strings and not interfere with param placeholders ([cde303f](https://github.com/erictooth/define-route/commit/cde303fe104bd4d49d9f9735c9aa3b0100c97ea8))
+
 # [0.1.0](https://github.com/erictooth/define-route/compare/v0.0.2...v0.1.0) (2022-10-09)
 
 
