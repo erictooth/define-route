@@ -18,8 +18,8 @@ const defineRouteWithBase =
 			extend: defineRouteWithBase(
 				(params: CombinedParams) => getUrl(params).href
 			),
-			link: (params: CombinedParams) =>
-				getUrl(params).href.replace(window.location.origin, ""),
+			link: (params?: CombinedParams) =>
+				getUrl(params || {} as CombinedParams).href.replace(window.location.origin, ""),
 			fullRoute: getRoute((params: CombinedParams) => getUrl(params).href),
 			route: getRoute(createPathname),
 		});
