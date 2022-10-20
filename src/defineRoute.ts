@@ -1,6 +1,10 @@
 import { combinePaths } from "./combinePaths";
 import type { CreatePathnameFn } from "./CreatePathnameFn.type";
 import { getRoute } from "./getRoute";
+import { PARAM_IDENTIFIER } from "./paramProxy";
+
+const paramRegex = new RegExp(PARAM_IDENTIFIER, "g");
+const paramPlaceholder = ":";
 
 const defineRouteWithBase =
 	<BaseParams, BasePath extends string>(
@@ -20,8 +24,10 @@ const defineRouteWithBase =
 			),
 			link: (params: CombinedParams) =>
 				getUrl(params).href.replace(window.location.origin, ""),
-			fullRoute: getRoute((params: CombinedParams) => getUrl(params).href),
-			route: getRoute(createPathname),
+			fullRoute: getRoute(
+				(params: CombinedParams) => getUrl(params).href
+			).replace(paramRegex, paramPlaceholder),
+			route: getRoute(createPathname).replace(paramRegex, paramPlaceholder),
 		});
 	};
 

@@ -22,3 +22,19 @@ it("extends a base route properly", () => {
 		`/base/sub/${testParams.paramA}/${testParams.paramB}/extended/1121?query=8910`
 	);
 });
+
+it("handles URI encoded paths", () => {
+	const route = defineRoute(
+		(params: { projectName: string }) =>
+			`/project/${encodeURIComponent(params.projectName)}`
+	);
+
+	expect(
+		route.link({
+			...testParams,
+			projectName: "/projectNameExample/test/folder1",
+		})
+	).toEqual(`/project/%2FprojectNameExample%2Ftest%2Ffolder1`);
+
+	expect(route.fullRoute).toEqual(`/project/:projectName`);
+});
