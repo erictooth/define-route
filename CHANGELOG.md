@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/erictooth/define-route/compare/v0.3.0...v0.3.1) (2022-10-31)
+
+
+### Bug Fixes
+
+* trigger release ([9b6d968](https://github.com/erictooth/define-route/commit/9b6d9682f200a06ee2941f9c6e6c614c6c8bf424))
+
 # [0.3.0](https://github.com/erictooth/define-route/compare/v0.2.0...v0.3.0) (2022-10-31)
 
 
