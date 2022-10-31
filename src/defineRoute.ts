@@ -24,14 +24,13 @@ const defineRouteWithBase =
 			),
 			link: (params: CombinedParams) =>
 				getUrl(params).href.replace(window.location.origin, ""),
-			get fullRoute() {
-				return getRoute(
-					(params: CombinedParams) => getUrl(params).href
-				).replace(paramRegex, paramPlaceholder);
-			},
-			get route() {
-				return getRoute(createPathname).replace(paramRegex, paramPlaceholder);
-			},
+			fullRoute: () =>
+				getRoute((params: CombinedParams) => getUrl(params).href).replace(
+					paramRegex,
+					paramPlaceholder
+				),
+			route: () =>
+				getRoute(createPathname).replace(paramRegex, paramPlaceholder),
 		});
 	};
 

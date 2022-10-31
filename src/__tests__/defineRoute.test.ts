@@ -10,7 +10,7 @@ const testConfig = (params: typeof testParams) =>
 
 it("templates route property correctly", () => {
 	// Query and hash should be dropped, and paramProxy should properly template the params
-	expect(defineRoute(testConfig).route).toEqual("/base/sub/:paramA/:paramB");
+	expect(defineRoute(testConfig).route()).toEqual("/base/sub/:paramA/:paramB");
 });
 
 it("extends a base route properly", () => {
@@ -36,5 +36,5 @@ it("handles URI encoded paths", () => {
 		})
 	).toEqual(`/project/%2FprojectNameExample%2Ftest%2Ffolder1`);
 
-	expect(route.fullRoute).toEqual(`/project/:projectName`);
+	expect(route.fullRoute()).toEqual(`/project/:projectName`);
 });
