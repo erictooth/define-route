@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/erictooth/define-route/compare/v0.2.0...v0.3.0) (2022-10-31)
+
+
+### Features
+
+* lazily generate `fullRoute` and `route` properties ([37b9ed5](https://github.com/erictooth/define-route/commit/37b9ed5ea56e9016c4d73983eff0110c7d044d1e))
+
 # [0.2.0](https://github.com/erictooth/define-route/compare/v0.1.0...v0.2.0) (2022-10-20)
 
 
