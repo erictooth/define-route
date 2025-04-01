@@ -23,7 +23,7 @@ const defineRouteWithBase =
 				(params: CombinedParams) => getUrl(params).href
 			),
 			link: (params: CombinedParams) =>
-				getUrl(params).href.replace(window.location.origin, ""),
+				getUrl(params).href.replace(globalThis.location.origin, ""),
 			fullRoute: () =>
 				getRoute((params: CombinedParams) => getUrl(params).href).replace(
 					paramRegex,
@@ -34,4 +34,6 @@ const defineRouteWithBase =
 		});
 	};
 
-export const defineRoute = defineRouteWithBase(() => window.location.origin);
+export const defineRoute = defineRouteWithBase(
+	() => globalThis.location.origin
+);
