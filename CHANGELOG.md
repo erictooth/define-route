@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/erictooth/define-route/compare/v0.3.1...v0.4.0) (2025-04-01)
+
+
+### Features
+
+* drop support for cjs ([a147bb0](https://github.com/erictooth/define-route/commit/a147bb029ec32c70dc76f0cac51d698885830a76))
+
 ## [0.3.1](https://github.com/erictooth/define-route/compare/v0.3.0...v0.3.1) (2022-10-31)
 
 
