@@ -1,2 +1,2 @@
-export * from "./CreatePathnameFn.type";
-export * from "./defineRoute";
+export * from "./CreatePathnameFn.type.ts";
+export * from "./defineRoute.ts";

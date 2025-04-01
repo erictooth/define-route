@@ -1,4 +1,4 @@
-import { addTrailingSlash, removeLeadingSlash } from "./pathUtils";
+import { addTrailingSlash, removeLeadingSlash } from "./pathUtils.ts";
 
 export const combinePaths = (path: string, basePath: string): URL => {
 	const baseUrl = new URL(basePath, window.location.origin);

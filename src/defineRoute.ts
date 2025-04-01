@@ -1,7 +1,7 @@
-import { combinePaths } from "./combinePaths";
-import type { CreatePathnameFn } from "./CreatePathnameFn.type";
-import { getRoute } from "./getRoute";
-import { PARAM_IDENTIFIER } from "./paramProxy";
+import { combinePaths } from "./combinePaths.ts";
+import type { CreatePathnameFn } from "./CreatePathnameFn.type.ts";
+import { getRoute } from "./getRoute.ts";
+import { PARAM_IDENTIFIER } from "./paramProxy.ts";
 
 const paramRegex = new RegExp(PARAM_IDENTIFIER, "g");
 const paramPlaceholder = ":";

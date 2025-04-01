@@ -1,5 +1,5 @@
-import { paramProxy } from "./paramProxy";
-import type { CreatePathnameFn } from "./CreatePathnameFn.type";
+import { paramProxy } from "./paramProxy.ts";
+import type { CreatePathnameFn } from "./CreatePathnameFn.type.ts";
 
 export const getRoute = <P, S extends string>(
 	createPathname: CreatePathnameFn<P, S>

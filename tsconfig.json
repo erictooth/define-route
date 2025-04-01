@@ -2,10 +2,21 @@
 	"include": ["src/**/*"],
 	"exclude": ["src/__tests__"],
 	"compilerOptions": {
+		"allowImportingTsExtensions": true,
+		"declaration": true,
+		"erasableSyntaxOnly": true,
+		"inlineSources": true,
+		"isolatedModules": true,
 		"lib": ["DOM", "ES2019"],
-		"moduleResolution": "node",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"outDir": "./dist",
+		"rewriteRelativeImportExtensions": true,
+		"rootDir": "./src",
+		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"target": "ES2019"
+		"target": "ES2019",
+		"verbatimModuleSyntax": true
 	}
 }
