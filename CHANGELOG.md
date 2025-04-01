@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/erictooth/define-route/compare/v0.4.0...v0.4.1) (2025-04-01)
+
+
+### Bug Fixes
+
+* replace window with globalThis ([a398c84](https://github.com/erictooth/define-route/commit/a398c843fbc6dd7c7a541c66f5f07b495ffeada1))
+
 # [0.4.0](https://github.com/erictooth/define-route/compare/v0.3.1...v0.4.0) (2025-04-01)
 
 
